@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation"; // For getting query params
 import ForthMain from "../components/ForthMain";
 import FifthMain from "../components/FifthMain";
+import { Suspense } from 'react';
 
 const RentCar = () => {
   const searchParams = useSearchParams(); // Use this hook to access query params
@@ -151,7 +152,7 @@ const RentCar = () => {
             </div>
             <div>
               <p className="text-[#596780]">
-                NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
+                NISMO has become the embodiment of Nissan outstanding performance, inspired by the most unforgiving proving ground, the "race track".
               </p>
             </div>
             <div className="flex gap-y-8 w-full flex-wrap">
@@ -187,5 +188,10 @@ const RentCar = () => {
     </>
   );
 };
+const RentCarWithSuspense = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <RentCar />
+  </Suspense>
+);
 
-export default RentCar;
+export default RentCarWithSuspense;

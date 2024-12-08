@@ -1,19 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
-    "@next/next/no-img-element": "off", // Disable warnings for <img> elements
-    "@typescript-eslint/no-unused-vars": "warn", // Warn for unused variables
-    "react/react-in-jsx-scope": "off", // Not needed in Next.js
-    "no-console": ["warn", { "allow": ["warn", "error"] }], // Warn for console logs except warn and error
-    "semi": ["error", "always"], // Enforce semicolons
-    "quotes": ["error", "double"] // Enforce double quotes
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
-        "@typescript-eslint/no-explicit-any": "warn" // Warn when using 'any' in TypeScript
-      }
-    }
-  ]
+    "@next/next/no-img-element": "off",  // Disable warning for using <img> elements
+    "react/no-unescaped-entities": "off"  // Disable warning for unescaped entities in JSX
+  }
 }

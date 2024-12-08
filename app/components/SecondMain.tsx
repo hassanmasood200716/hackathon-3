@@ -5,7 +5,7 @@ const SecondMain = () => {
     return (
         <div className='flex flex-col md:flex-row justify-around items-center bg-[#F6F7F9]'>
             <div className=' w-1/2.5 p-4 bg-white'>
-                <div className=''>
+                <div>
                     <label className="flex items-center">
                         <input type="radio" name="option" value="pickup" className="form-radio text-blue-600 h-5 w-5" />
                         <span className="ml-2 text-gray-700 py-4 font-bold">Pickup</span>
@@ -57,7 +57,7 @@ const SecondMain = () => {
             </div>
 
             <div className='w-1/2.5 p-4 bg-white'>
-                <div className=''>
+                <div>
                     <label className="flex items-center">
                         <input type="radio" name="option" value="pickup" className="form-radio text-blue-600 h-5 w-5" />
                         <span className="ml-2 font-bold text-gray-700 py-4">Drop-of</span>
