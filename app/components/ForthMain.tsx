@@ -2,7 +2,7 @@ import React from 'react'
 
 const ForthMain = () => {
   return (
-    <div className='w-full md:w-4/6 overflow-x-hiddenhidden'>
+    <div className='w-full  overflow-x-hidden'>
         <h1 className='font-bold text-2xl p-10 m-10 my-2 '>
             Reviews
         </h1>

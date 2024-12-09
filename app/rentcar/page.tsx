@@ -107,18 +107,18 @@ const RentCar = () => {
         </div>
         <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row">
-        <div className="flex flex-col gap-5 w-full md:w-4/5 lg:w-1/3" >
+        <div className="flex flex-col gap-5 w-full md:w-4/5 lg:w-2/3" >
           <div className="relative">
             <div
               className="h-[50vh] absolute inset-0 -z-10 bg-cover bg-center"
               style={{ backgroundImage: 'url("/images/wallpaper1.png")' }}
             />
             <div className="relative z-10">
-              <div className="h-[60vh] w-[90vw] md:[30vw] p-4 rounded-lg flex items-start justify-center flex-col text-white">
+              <div className="h-[60vh] w-[90vw] md:w-[30vw] p-4 rounded-lg flex items-start justify-center flex-col text-white">
                 <div className="text-3xl ">
                   Sports car with the best design and acceleration
                 </div>
-                <div className="text-lg w-[90vw] md:[20vw] pt-4">
+                <div className="text-lg w-[90vw] md:w-[20vw] pt-4">
                   Safety and comfort while driving a futuristic and elegant sports car
                 </div>
                 <div className="flex justify-center items-center">
@@ -169,7 +169,7 @@ const RentCar = () => {
 
 
         </div>
-        <div className="w-full lg:w-2/6  px-16 h-[55vh] bg-white">
+        <div className="w-full lg:w-3/6  px-16 h-[55vh] bg-white">
           <div className="flex flex-col gap-y-6">
             <div>
               <h1 className="text-3xl font-bold">{name}</h1>
@@ -203,14 +203,18 @@ const RentCar = () => {
             </div>
             <div>
             <Link href={`/payment?${paymentQuery}`}>
-            <button   onClick={() => console.log("Button Clicked!")} className="bg-[#3563E9] cursor-pointer text-white rounded-lg p-4 py-2">Pay Now</button>
+            <button   onClick={() => console.log("Button Clicked!")} className="bg-[#3563E9] cursor-pointer text-white rounded-lg p-4 m-10 z-100 py-2">Pay Now</button>
             </Link>
             </div>
           </div>
         </div>
         </div>
+        <div className="mt-20 md:mt-0">
           <ForthMain />
+          </div>
+          <div>
           <FifthMain />
+          </div>
         </div>
         </div>
 

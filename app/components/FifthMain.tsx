@@ -72,12 +72,12 @@ const FifthMain = () => {
   return (
     <>
     <div className='flex lg:flex-col  items-start justify-center'> 
-    <div className='grid grid-cols-1 justify-items-center lg:grid-cols-3 w-4/6 '>
+    <div className='grid grid-cols-1 justify-items-center lg:grid-cols-3 w-full '>
                     <Cardz type="sports" name="Koenigsegg" src="/images/car1.png" capicity='90L' pplecap="2" price="99" />
                     <Cardz type="sports" name="Nissan GT-R" src="/images/car2.png" capicity='80L' pplecap="2" price="80" />
                     <Cardz type="sedan" name="Rolls - Royce" src="/images/car3.png" capicity='70L' pplecap="4" price="96" />
                     </div>
-                    <div  className='hidden lg:grid grid-cols-3 w-4/6'>
+                    <div  className='hidden lg:grid grid-cols-3 w-full'>
                     <Cardz type="SUv" name="All New Rush" src="/images/car4.png" capicity='70L' pplecap="6" price="72" />
                     <Cardz type="SUV" name="CR - V" src="/images/car5.png" capicity='80L' pplecap="6" price="80" />
                     <Cardz type="SUV" name="All New Terios" src="/images/car6.png" capicity='90L' pplecap="6" price="74" />

@@ -48,7 +48,7 @@ const Footer = () => {
                 <p className='font-bold py-10'>
                 ©2022 MORENT. All rights reserved
                 </p> 
-                <div className='font-bold py-10'>
+                <div className='font-bold py-10 flex justify-around'>
                     <span>Privacy & Policy</span>
                     <span>Terms & Condition</span>
                 </div>
