@@ -2,19 +2,19 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='bg-white h-[100vh]'>
+        <div className='bg-white h-[100vh] md:h-[50vh]'>
             <div className='flex flex-col md:flex-row items-center justify-around h-full'>
-                <div className='w-1/3'>
-                    <h1 className='text-[#3563E9] text-3xl font-bold py-4'>
+                <div className='md:w-1/3 md:px-10 lg:px-0 w-full '>
+                    <h1 className='text-[#3563E9] text-3xl text-center md:text-left font-bold py-4'>
                         MORENT
                     </h1>
-                    <p className='text-left'>
+                    <p className='md:text-left text-center'>
                         Our vision is to provide convenience and help increase your sales business.
                     </p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-3' >
+                <div className='grid grid-cols-2 md:grid-cols-3' >
                     <div>
-                        <div className='font-bold py-3 px-7'>
+                        <div className='font-bold py-5 px-7'>
                             About
                         </div>
                         <div className='py-3 px-7'>How it works</div>

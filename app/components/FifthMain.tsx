@@ -16,7 +16,7 @@ interface CardzProps {
 const Cardz = (props: CardzProps) => {
 
     return (
-        <div className='w-full md:w-1/3 my-10 bg-[#FFFFFF] flex flex-col justify-center'>
+        <div className='w-full md:w-4/5 my-10 bg-[#FFFFFF] flex flex-col justify-center'>
             <div className='flex items-start justify-around p-4 '>
                 <div className='flex flex-col'>
                     <h1 className='font-bold text-xl'>{props.name}</h1>
@@ -71,15 +71,17 @@ const Cardz = (props: CardzProps) => {
 const FifthMain = () => {
   return (
     <>
-    <div className='flex flex-wrap'>
+    <div className='flex lg:flex-col  items-start justify-center'> 
+    <div className='grid grid-cols-1 justify-items-center lg:grid-cols-3 w-4/6 '>
                     <Cardz type="sports" name="Koenigsegg" src="/images/car1.png" capicity='90L' pplecap="2" price="99" />
                     <Cardz type="sports" name="Nissan GT-R" src="/images/car2.png" capicity='80L' pplecap="2" price="80" />
                     <Cardz type="sedan" name="Rolls - Royce" src="/images/car3.png" capicity='70L' pplecap="4" price="96" />
                     </div>
-                    <div  className='hidden md:flex flex-wrap'>
+                    <div  className='hidden lg:grid grid-cols-3 w-4/6'>
                     <Cardz type="SUv" name="All New Rush" src="/images/car4.png" capicity='70L' pplecap="6" price="72" />
                     <Cardz type="SUV" name="CR - V" src="/images/car5.png" capicity='80L' pplecap="6" price="80" />
                     <Cardz type="SUV" name="All New Terios" src="/images/car6.png" capicity='90L' pplecap="6" price="74" />
+                    </div>
                     
     </div>
     </>

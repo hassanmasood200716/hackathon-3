@@ -51,7 +51,7 @@ const Cardz = (props: CardzProps) => {
                 </div>
                 <Link
         href={{
-          pathname:  "/rentcar",  // The path to rentcar
+          pathname:  "/rentcar", // The path to rentcar
           query: {  // Passing the query params to rentcar
             name: props.name,
             type: props.type,
@@ -76,7 +76,7 @@ const Cardz = (props: CardzProps) => {
 const DetailCar = () => {
     return (
         <div className="flex ">
-            <div className="w-1/5 md:block hidden h-full ">
+            <div className="w-1/5 lg:block hidden h-full ">
                 <div className="flex flex-col gap-2 items-start p-10 gap-y-6">
                     <p className="text-[#90A3BF]">
                         TYPE
@@ -105,7 +105,7 @@ const DetailCar = () => {
             </div>
             <div className="py-10 px-5 bg-[#F6F7F9]">
                 <SecondMain ></SecondMain>
-                <div className='flex items-center justify-around mx-10 flex-wrap'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     <Cardz type="sports" name="Koenigsegg" src="/images/car1.png" capicity='90L' pplecap="2" price="99" />
                     <Cardz type="sports" name="Nissan GT-R" src="/images/car2.png" capicity='80L' pplecap="2" price="80" />
                     <Cardz type="sedan" name="Rolls - Royce" src="/images/car3.png" capicity='70L' pplecap="4" price="96" />

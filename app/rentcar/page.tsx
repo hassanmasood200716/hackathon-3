@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation"; // For getting query params
 import ForthMain from "../components/ForthMain";
 import FifthMain from "../components/FifthMain";
 import { Suspense } from 'react';
+import Link from "next/link";
 
 const RentCar = () => {
   const searchParams = useSearchParams(); // Use this hook to access query params
@@ -16,11 +17,22 @@ const RentCar = () => {
   const price = searchParams.get("price");
   const src = searchParams.get("src");
 
+
+  const paymentQuery = new URLSearchParams({
+    name: name || "",
+    type: type || "",
+    capacity: capacity || "",
+    peopleCapacity: peopleCapacity || "",
+    price: price || "",
+    src: src || "",
+  }).toString();
+
+
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col md:flex-row">
         
-        <div className="w-1/5 md:block hidden h-[150vh]">
+        <div className="w-1/5 lg:block hidden h-[150vh]">
           <div className="flex flex-col gap-2 items-start p-10 gap-y-6">
             <p className="text-[#90A3BF]">TYPE</p>
             <div>
@@ -94,8 +106,8 @@ const RentCar = () => {
           </div>
         </div>
         <div className="flex flex-col">
-        <div className="flex flex-col md:flex-row">
-        <div className="flex flex-col gap-5 w-full md:w-2/5">
+        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col gap-5 w-full md:w-4/5 lg:w-1/3" >
           <div className="relative">
             <div
               className="h-[50vh] absolute inset-0 -z-10 bg-cover bg-center"
@@ -106,9 +118,8 @@ const RentCar = () => {
                 <div className="text-3xl ">
                   Sports car with the best design and acceleration
                 </div>
-                <div className="text-lg w-[90vw] md:[20vw] py-4">
-                  Safety and comfort while driving a
-                  futuristic and elegant sports car
+                <div className="text-lg w-[90vw] md:[20vw] pt-4">
+                  Safety and comfort while driving a futuristic and elegant sports car
                 </div>
                 <div className="flex justify-center items-center">
 
@@ -117,32 +128,48 @@ const RentCar = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="relative md:block hidden">
-              <div
-                className="h-[15vh] rounded-xl  w-[10vw] absolute inset-0 -z-10 bg-cover bg-center"
-                style={{ backgroundImage: 'url("/images/wallpaper2.jpg")' }}
-              />
-              <div className="relative z-10">
-                <div className="h-[10vh] w-[10vw] p-5 rounded-lg flex items-start justify-between flex-col text-white">
 
-                  <div >
 
-                    <img src={src as string} alt="Car" width={300} height={300} />
-                  </div>
-                </div>
 
-              </div>
-            </div>
-            <div className="h-[15vh] w-[10vw] p-5 rounded-lg  md:block hidden">
-              <img className="rounded-lg" src="/images/interior.png" alt="Car" />
-            </div>
-            <div className="h-[10vh] w-[10vw] p-5 rounded-lg md:block hidden">
-              <img className="rounded-lg" src="/images/interior2.png" alt="Car" />
-            </div>
-          </div>
+          <div className="flex items-center justify-center space-x-4">
+  {/* First Image with Background */}
+  <div className="relative lg:block hidden h-[15vh] w-[15vw]">
+    <div
+      className="absolute inset-0 rounded-lg bg-cover bg-center"
+      style={{ backgroundImage: 'url("/images/wallpaper2.jpg")' }}
+    />
+    <div className="relative z-10 h-full w-full flex items-center justify-center">
+      <img
+        className="rounded-lg"
+        src={src as string}
+        alt="Car"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    </div>
+  </div>
+
+  {/* Second Image */}
+  <div className="h-[15vh] w-[15vw] lg:block hidden">
+    <img
+      className="rounded-lg h-full w-full object-cover"
+      src="/images/interior.png"
+      alt="Car"
+    />
+  </div>
+
+  {/* Third Image */}
+  <div className="h-[15vh] w-[15vw] lg:block hidden">
+    <img
+      className="rounded-lg h-full w-full object-cover"
+      src="/images/interior2.png"
+      alt="Car"
+    />
+  </div>
+</div>
+
+
         </div>
-        <div className="w-full md:w-2/6  px-16 h-[55vh] bg-white">
+        <div className="w-full lg:w-2/6  px-16 h-[55vh] bg-white">
           <div className="flex flex-col gap-y-6">
             <div>
               <h1 className="text-3xl font-bold">{name}</h1>
@@ -175,7 +202,9 @@ const RentCar = () => {
             <span className='font-bold text-2xl '>$</span>< span className='font-bold text-2xl'>{price}</span><span>day</span>
             </div>
             <div>
-            <button  className="bg-[#3563E9] text-white rounded-lg p-4 py-2">Rent Now</button>
+            <Link href={`/payment?${paymentQuery}`}>
+            <button   onClick={() => console.log("Button Clicked!")} className="bg-[#3563E9] cursor-pointer text-white rounded-lg p-4 py-2">Pay Now</button>
+            </Link>
             </div>
           </div>
         </div>

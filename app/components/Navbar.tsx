@@ -1,11 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import 'remixicon/fonts/remixicon.css';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
     <nav className='flex items-center justify-between p-5'>
-        <div className='text-[#3563E9] text-3xl font-bold '>MORENT</div>
+      <Link href={"/"}>
+        <button className='text-[#3563E9] text-3xl font-bold '>MORENT</button>
+      </Link>
         <div className="relative inline-block w-full max-w-sm">
             <input
                 type="text"
