@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const Payment = () => {
@@ -217,4 +217,10 @@ const Payment = () => {
     )
 }
 
-export default Payment
+const PaymentPage = () => (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Payment />
+    </Suspense>
+  );
+  
+  export default PaymentPage;
