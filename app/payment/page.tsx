@@ -3,15 +3,12 @@ import React from 'react'
 
 import { useSearchParams } from 'next/navigation';
 
-const payment = () => {
+const Payment = () => {
 
 
     const searchParams = useSearchParams();
 
     const name = searchParams.get("name");
-    const type = searchParams.get("type");
-    const capacity = searchParams.get("capacity");
-    const peopleCapacity = searchParams.get("peopleCapacity");
     const price = searchParams.get("price");
     const src = searchParams.get("src");
 
@@ -220,4 +217,4 @@ const payment = () => {
     )
 }
 
-export default payment
+export default Payment
