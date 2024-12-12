@@ -183,16 +183,16 @@ const RentCar = () => {
               </p>
             </div>
             <div className="flex gap-y-8 w-full flex-wrap">
-              <div className="flex w-1/2  gap-8">
+              <div className="flex w-1/2  gap-3 md:gap-8">
                 <span className="text-[#90A3BF]">TypeCar</span> <span className="text-[#596780]">{type}</span>
               </div>
-              <div className="flex w-1/2  gap-8">
+              <div className="flex w-1/2  gap-3 md:gap-8">
                 <span className="text-[#90A3BF]">Capacity</span> <span className="text-[#596780]">{peopleCapacity}</span>
               </div>
-              <div className="flex w-1/2  gap-8">
+              <div className="flex w-1/2 m-0  gap-3 md:gap-8">
                 <span className="text-[#90A3BF]">Steering </span> <span className="text-[#596780]">Manual</span>
               </div>
-              <div className="flex w-1/2  gap-8">
+              <div className="flex w-1/2  gap-3 md:gap-8">
                 <span className="text-[#90A3BF]">Gasoline</span> <span className="text-[#596780]">{capacity}</span>
               </div>
             </div>
@@ -228,3 +228,7 @@ const RentCarWithSuspense = () => (
 );
 
 export default RentCarWithSuspense;
+
+
+
+

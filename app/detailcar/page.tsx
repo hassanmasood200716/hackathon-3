@@ -51,8 +51,8 @@ const Cardz = (props: CardzProps) => {
                 </div>
                 <Link
         href={{
-          pathname:  "/rentcar", // The path to rentcar
-          query: {  // Passing the query params to rentcar
+          pathname:  "/rentcar", 
+          query: { 
             name: props.name,
             type: props.type,
             capacity: props.capicity,
