@@ -12,6 +12,7 @@ interface CategorySelectorProps {
 
 export function CategorySelectorComponent({ categories }: CategorySelectorProps) {
   const [selectedCategory, setSelectedCategory] = React.useState<string>("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [products, setProducts] = React.useState<Product[]>([]);
   const router = useRouter();
 

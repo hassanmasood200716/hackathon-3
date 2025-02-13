@@ -1,17 +1,15 @@
 import React from 'react';
-import { Category, Product } from "@/sanity.types";
+import {  Product } from "@/sanity.types";
 import Productgrid from './ProductGrid';
 
 interface ProductsViewProps {
     products: Product[];
-    categories: Category[];
 }
 
-const ProductsView = ({ products, categories }: ProductsViewProps) => {
+const ProductsView = ({ products }: ProductsViewProps) => {
     return (
         <div className="flex flex-col">
             <div className="w-full sm:w-[200px]">
-                {/* <CategorySelectorComponent categories={categories}/> */}
             </div>
             <div>
                 <div className="flex-1">
