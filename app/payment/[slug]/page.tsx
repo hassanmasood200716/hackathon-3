@@ -4,7 +4,7 @@ import { getProductBySlug } from "@/sanity/lib/products/getProductBySlug";
 
 
 export default async function PaymentPage({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+    const { slug } = await params;
     const product = await getProductBySlug(slug);
 
     if (!product) {
