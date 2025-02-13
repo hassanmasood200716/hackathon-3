@@ -1,9 +1,10 @@
 import React from 'react';
-import {  Product } from "@/sanity.types";
+import { Category, Product } from "@/sanity.types";
 import Productgrid from './ProductGrid';
 
 interface ProductsViewProps {
     products: Product[];
+    // categories?: Category[];
 }
 
 const ProductsView = ({ products }: ProductsViewProps) => {

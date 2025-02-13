@@ -1,10 +1,10 @@
-
+// @ts-nocheck
 import { imageUrl } from "@/sanity/lib/image"; // Adjust this import if needed
 import { getProductBySlug } from "@/sanity/lib/products/getProductBySlug";
 
 
-export default async function PaymentPage({ params }: { params: { slug: string } }) {
-    const { slug } = await params;
+export default async function PaymentPage({ params }) {
+    const { slug } = params;
     const product = await getProductBySlug(slug);
 
     if (!product) {

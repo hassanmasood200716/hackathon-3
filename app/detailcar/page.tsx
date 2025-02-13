@@ -22,7 +22,7 @@ const DetailCar =async () => {
             </div>
             <div className="py-10 px-5 bg-[#F6F7F9]">
                 <SecondMain ></SecondMain>
-                <ProductsView products={products} categories={categories} />
+                <ProductsView products={products} />
             </div>
         </div>
     );

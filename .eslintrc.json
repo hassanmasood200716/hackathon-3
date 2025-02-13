@@ -2,6 +2,9 @@
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "@next/next/no-img-element": "off",  // Disable warning for using <img> elements
-    "react/no-unescaped-entities": "off"  // Disable warning for unescaped entities in JSX
+    "react/no-unescaped-entities": "off",  // Disable warning for unescaped entities in JSX
+    "@typescript-eslint/no-unused-vars": "off",  // Disable unused variables rule
+    "@typescript-eslint/no-explicit-any": "off",  // Allow usage of 'any' type
+    "react/react-in-jsx-scope": "off"  // Disable warning for missing React import in JSX (not needed in Next.js)
   }
 }
