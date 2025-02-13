@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Head from "next/head";
+import { ClerkProvider } from '@clerk/nextjs'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,6 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
+    <ClerkProvider>
     <html lang="en">
     <Head>
         <link rel="icon" href="/letter-h.png" />
@@ -40,6 +42,7 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    </ClerkProvider>
     </>
   );
 }
