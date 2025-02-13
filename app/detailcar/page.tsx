@@ -2,7 +2,6 @@
 import { getAllCategories } from "@/sanity/lib/products/getAllCategories";
 import { CategorySelectorComponent } from "../components/categoryselector";
 import SecondMain from "../components/SecondMain";
-import Link from "next/link";
 import { getAllProducts } from "@/sanity/lib/products/getAllProducts";
 import ProductsView from "../components/ProductView";
 

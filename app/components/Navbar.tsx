@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import Image from 'next/image'
 import 'remixicon/fonts/remixicon.css';
 import Link from 'next/link';
 import { ClerkLoaded, SignInButton, UserButton, useUser } from "@clerk/nextjs";

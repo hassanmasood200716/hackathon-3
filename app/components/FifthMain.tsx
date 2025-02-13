@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from "next/link";
 import { getAllProducts } from '@/sanity/lib/products/getAllProducts';
 import { getAllCategories } from '@/sanity/lib/products/getAllCategories';
 import ProductsView from './ProductView';

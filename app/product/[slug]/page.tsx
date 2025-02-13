@@ -16,7 +16,6 @@ async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
     if (!product){
         return notFound();
     }
-    const isOutOfStock = product.stock != null && product.stock <= 0;
     return(
         <>
        
